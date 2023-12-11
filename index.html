@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="landing-page">
+        <h1>PokéGallery</h1>
+        <p>A mini PokéDex</p>
+        <button><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                viewBox="0 -100 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+            </svg></button>
+    </section>
+    <section id="gallery">
+        <div class="container">
+            <img src="/assets/aipom.png" alt="aipom" data-selected="aipom">
+            <img src="/assets/bulbasaur.png" alt="bulbasaur" data-selected="bulbasaur">
+            <img src="/assets/charmandar.png" alt="charmandar" data-selected="charmandar">
+            <img src="/assets/ditto.png" alt="ditto" data-selected="ditto">
+            <img src="/assets/eevee.png" alt="eevee" data-selected="eevee">
+            <img src="/assets/jigglypuff.png" alt="jigglypuff" data-selected="jigglypuff">
+            <img src="/assets/lucario.png" alt="lucario" data-selected="lucario">
+            <img src="/assets/meowth.png" alt="meowth" data-selected="meowth">
+            <img src="/assets/mewtwo.png" alt="mewtwo" data-selected="mewtwo">
+            <img src="/assets/Mr. Mime.png" alt="mr.mime" data-selected="mr.mime">
+            <img src="/assets/pidgey.png" alt="Pidgey" data-selected="pidgey">
+            <img src="/assets/pikachu.png" alt="Pikachu" data-selected="pikachu">
+            <img src="/assets/psyduck.png" alt="Psyduck" data-selected="psyduck">
+            <img src="/assets/snorlax.png" alt="snorlax" data-selected="snorlax">
+            <img src="/assets/squirtle.png" alt="squirtle" data-selected="squirtle">
+            <img src="/assets/togepi.png" alt="togepi" data-selected="togepi">
+        </div>
+        <div id="modal">
+            <span class="close"><svg xmlns="http://www.w3.org/2000/svg" height="40" width="40"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                    <path fill="#ffffff"
+                        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
+                </svg></span>
+            <div class="modal-flex">
+                <img class="modal-img">
+                <div class="info">
+                    <h2 class="title"></h2>
+                    <p class="about"></p>
+                    <h3>Type</h3>
+                    <p class="type"></p>
+                    <h3>Abilities</h3>
+                    <p class="ability"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+#landing-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    background-color: black;
+    font-size: 2.5rem;
+}
+
+#landing-page h1{
+    margin-top: 0;
+    font-weight: 500;
+    margin-bottom: 10px;
+    animation-name: zoom;
+    animation-duration: 1.5s;
+}
+
+#landing-page p{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 2rem;
+    text-align: left;
+    animation-name: appear;
+    animation-duration: 3s;
+}
+
+#landing-page button{
+    padding: 11px 13px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50px;
+    cursor: pointer;
+    animation-name: appear;
+    animation-duration: 5s;
+    transition: transform 1.5s;
+    border: none;
+}
+
+#gallery{
+    height: 100vh;
+    /* position: relative; */
+    z-index: 0;
+}
+
+.container{
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    /* background-color: red; */
+    gap: 10px;
+}
+
+.container > img{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(128, 128, 128, 0.721);
+    border: 1px solid rgba(128, 128, 128, 0.721);
+    cursor: pointer;
+    transition: all 1s;
+}
+
+#modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation-name: zoom;
+    animation-duration: 0.5s;
+}
+
+.close{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal-flex{
+    color: #fff;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.info{
+    margin-left: 10px;
+}
+
+.info>.title{
+    font-size: 2em;
+}
+
+#modal.zoomOut{
+    animation-name: zoomOut;
+    animation-duration: 1s;
+}
+
+/* animations */
+@keyframes zoom {
+    from { transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+@keyframes appear {
+    from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+@keyframes zoomOut{
+    from { transform: scale(1);}
+    to { transform: scale(0);}
+}
+
+#landing-page button:hover{
+    transform: rotate(360deg);
+}
+
+.container > img:hover{
+    transform: translateY(-10px);
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+/* responsive */
+@media (max-width: 1150px){
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 860px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .modal-flex{
+        flex-direction: column;
+    }
+    .info{
+        text-align: center;
+    }
+}
