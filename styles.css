@@ -45,7 +45,7 @@ body{
 
 #gallery{
     height: 100vh;
-    /* position: relative; */
+    margin-top: 20px;
     z-index: 0;
 }
 
@@ -56,7 +56,6 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
-    /* background-color: red; */
     gap: 10px;
 }
 
@@ -106,6 +105,10 @@ body{
 
 .info>.title{
     font-size: 2em;
+}
+
+.info>h3{
+    font-size: 1.5em;
 }
 
 #modal.zoomOut{
